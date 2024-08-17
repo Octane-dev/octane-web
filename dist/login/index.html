@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup | Octane</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .auth-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #326db6; /* Accent color */
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #326db6; /* Accent color */
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #285a9c; /* Darker shade on hover */
+        }
+
+        .message {
+            margin-top: 15px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .message a {
+            color: #326db6;
+            text-decoration: none;
+        }
+
+        .message a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Login/Signup</h1>
+        <div id="auth">
+            <!-- Login/Signup Form -->
+            <div id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <button onclick="login()">Login</button>
+                <div class="message">Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></div>
+            </div>
+            <div id="signup-form" class="auth-form" style="display:none;">
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="text" id="signup-email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Password">
+                </div>
+                <button onclick="signup()">Sign Up</button>
+                <div class="message">Already have an account? <a href="#" onclick="toggleForm()">Login</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        // Initialize Netlify Identity
+        netlifyIdentity.init();
+
+        function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            loginForm.style.display = (loginForm.style.display === 'none') ? 'block' : 'none';
+            signupForm.style.display = (signupForm.style.display === 'none') ? 'block' : 'none';
+        }
+
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            netlifyIdentity.open('login');
+        }
+
+        function signup() {
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            netlifyIdentity.open('signup');
+        }
+
+        // Handle post-login redirect
+        netlifyIdentity.on('login', user => {
+            window.location.href = '/'; // Redirect to home or dashboard after login
+        });
+
+        netlifyIdentity.on('logout', () => {
+            window.location.href = '/'; // Redirect to home or dashboard after logout
+        });
+    </script>
+</body>
+</html>

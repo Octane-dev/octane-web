@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- built by octane -->
+<!-- if you're reading this why are you here lol -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/loader.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/media.css">
+    <script src="/start.js"></script>
+    <script src="/form.js"></script>
+    <title>Octane | Quality Motion Designs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous"> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="landscape-mobile-blocker">
+        <h2>Hey!</h2>
+        <h4>I see you're trying to view the site in landscape mode.<br>
+        Please change to portrait mode to see the site.</h4>
+        <img src="/images/octanelogo.png" alt="octanelogo">
+    </div>
+    <div class="content">
+        <div class="hero" id="top">
+            <div class="hero-banner">
+                <div class="slideshow">
+                    <div class="slides">
+                        <img src="/images/slides/showcase.png" alt="Intro 1">
+                        <img src="/images/slides/best.png" alt="Intro 2">
+                        <img src="/images/slides/funny-intro-thumb.png" alt="Intro 3">
+                        <img src="/images/slides/giveaway_lol.png" alt="Intro 4">
+                        <img src="/images/slides/airbus.png" alt="Intro 5">
+                        <img src="/images/slides/voidyxyl.png" alt="Intro 6">
+                        <img src="/images/slides/showcase.png" alt="Intro 1b">
+                    </div>
+                </div>
+                <div class="title-etc">
+                    <h1>OCTANE</h1>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="about-me" id="about-me">
+                <div class="left-info">
+                    <h2>About Me</h2>
+                    <p>Greetings! I'm Octane, a skilled motion designer with more than three years of experience. My design services are diverse and cater to your every need, so kindly peruse them and don't hesitate to <a class="link1" href="#contact">reach out</a> for any inquiries or design requests.</p>
+                </div>
+                <div class="right-info">
+                    <img src="/images/octanelogo.png" alt="octanelogo">
+                </div>
+            </div>
+            <div class="design-examples">
+                <div class="design-banner" id="examples">
+                    <h1>DESIGNS</h1>
+                </div>
+                <div class="designs">
+                    <div class="design1" id="airbus">
+                        <div class="left-info">
+                            <h2>AIRBUS</h2>
+                            <p>This is a design I forged for AirbusDZN, a fellow motion designer. I am very proud of the overall visuals of this intro and I think it's a cool style.</p>
+                            <a data-scroll href="#showcase">
+                                <div class="arrow"></div>
+                            </a>
+                        </div>
+                        <div class="right-info">
+                            <img src="/images/slides/best.png" alt="">
+                        </div>
+                    </div>
+                    <div class="design2" id="showcase">
+                        <div class="left-info">
+                            <img src="/images/slides/showcase.png" alt="">
+                        </div>
+                        <div class="right-info">
+                            <h2>SHOWCASE</h2>
+                            <p>This is one of my latest designs! I made this to further promote my channel and show off my skills. It's a basic styled intro but was a lot of work to perfect.</p>
+                            <a data-scroll href="#voidyxyl">
+                                <div class="arrow"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="design1" id="voidyxyl">
+                        <div class="left-info">
+                            <h2>VOIDYXYL</h2>
+                            <p>This design was inspired originally from <a class="link2" target="_blank" href="https://www.youtube.com/@DreamEffecks">DreamFX</a>, an awesome creator. I decided to use my knowledge and persevere and I did!</p>
+                            <a data-scroll href="#next">
+                                <div class="arrow"></div>
+                            </a>
+                        </div>
+                        <div class="right-info">
+                            <img src="/images/slides/voidyxyl.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="viewers-response-banner" id="next">
+                    <div class="text">
+                        <h2>Love the vibe!</h2>
+                        <h4>- AuroicAuri</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="form" id="contact">
+                <h2>Inquire</h2>
+                <form
+                    id="inquire" method="POST" netlify onSubmit="submit"
+                    data-netlify-honeypot="bot-field" action="/thanks/"
+                >
+                    <div class="inner" id="form">
+                        <input style="display: none;" name="bot-field">
+                        <div class="field" data-el="name">
+                            <input type="text" name="Name" id="name-form" placeholder="Name" maxlength="128" required>
+                        </div>
+                        <div class="field" data-el="email">
+                            <input type="email" name="email" id="email-form" placeholder="Email" maxlength="128" required>
+                        </div>
+                        <div class="field" data-el="discord">
+                            <input type="text" name="discord" id="discord-form" placeholder="Discord (optional)" maxlength="128">
+                        </div>
+                        <div class="field" data-el="service">
+                            <input type="text" name="service" id="service-form" maxlength="128" placeholder="Service" required>
+                        </div>
+                        <div class="field" data-el="budget">
+                            <input type="number" name="budget" id="budget-form" min="5" placeholder="Budget (£)" required>
+                        </div>
+                        <div class="field" id="overview">
+                            <textarea name="overview" id="overview-form" maxlength="16384" placeholder="Message - Tell me about your project ideas" spellcheck="false" data-enable-grammarly="false" required style="resize: none;"></textarea>
+                        </div>
+                        <!-- <div data-netlify-recaptcha="true"></div> -->
+                        <div class="action" data-el="submit">
+                            <button type="submit" id="submit">Contact</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="rock-bottom">
+                <div class="footer">
+                    <div class="footer-content">
+                        <div class="footer-section about">
+                            <h4>About Octane</h4>
+                            <p>
+                                Greetings! I'm Octane, a skilled motion designer with more than three years of experience. My design services are diverse and cater to your every need, so kindly peruse them and don't hesitate to reach out for any inquiries or design requests.                            </p>
+                        </div>
+                        <div class="footer-section links">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#top">Home</a></li>
+                                <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                                <li><a href="#examples">Examples</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="javascript:netlifyIdentity.open()">Templates</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section contact">
+                            <h4>Contact Info & Socials</h4>
+                            <p><a href="mailto:contact.octanevisuals@gmail.com"><i class="fas fa-envelope"></i> Email: contact.octanevisuals@gmail.com</a></p>
+                            <div class="social-links">
+                                <a href="https://www.youtube.com/@octanemotion?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                                <a href="https://www.instagram.com/octanemotion/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                                <a href="javascript:netlifyIdentity.open()"><i class="fas fa-link"></i> Login / Signup</a> <!-- Placeholder link -->
+                                <!-- <a href="/login"><i class="fas fa-link"></i> Login / Signup</a> Placeholder link -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 OctaneMotion. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="overlay"></div> Overlay div -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/private/locked-content"
+                    })
+                }
+            }
+        )}
+
+        // function login() {
+        //     // Show the overlay
+        //     // document.getElementById('overlay').style.display = 'block';
+        //     document.body.classList.add('locked');
+
+        //     // Open Netlify Identity widget
+        //     netlifyIdentity.open('login');
+        // }
+
+        // // Handle the overlay and scrolling when Netlify Identity widget closes
+        // netlifyIdentity.on('close', function() {
+        //     // Hide the overlay
+        //     // document.getElementById('overlay').style.display = 'none';
+        //     document.body.classList.remove('locked');
+        // });
+
+        // // Ensure the overlay is hidden and scrolling is unlocked on page load
+        // window.addEventListener('load', function() {
+        //     // document.getElementById('overlay').style.display = 'none';
+        //     document.body.classList.remove('locked');
+        // });
+    </script>
+</body>
+</html>

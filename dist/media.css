@@ -1,0 +1,122 @@
+@media screen and (max-width:825px) {
+    .title-etc h1 {
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width:620px) {
+    .title-etc h1 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width:1375px) {
+    .page .about-me .left-info p {
+        font-size: 30px;
+    }
+    .page .about-me .right-info img {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width:1170px) {
+    .page .about-me .left-info h2 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .page .about-me {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .page .about-me .left-info p {
+        font-size: 25px;
+    }
+    .page .about-me .right-info img {
+        max-width: 200px;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .page .design-examples .designs {
+        height: auto;
+    }
+    .page .design-examples .designs .design1 {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .page .design-examples .designs .design2 {
+        flex-direction: column-reverse;
+        /* flex-direction: column; */
+        justify-content: center;
+    }
+    .page .design-examples .designs .design1 {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .design1 .left-info,
+    .design1 .right-info,
+    .design2 .left-info,
+    .design2 .right-info {
+        width: 100%;
+        max-width: 100%;
+    }
+    #voidyxyl {
+        /* padding-bottom: 150px; */
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1155px) {
+    .arrow {
+        border-color: rgba(0, 0, 0, 0);
+        display: none;
+    }
+    .viewers-response-banner {
+        height: 0;
+    }
+    .viewers-response-banner h2,
+    .viewers-response-banner h4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .design-banner h1 {
+        font-size: 70px;
+    }
+    .page .about-me .right-info img {
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .form form {
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .title-etc h1 {
+        font-size: 90px;
+    }
+    .about-me  {
+        height: auto;
+    }
+
+    .about-me .left-info h2 {
+        margin-bottom: -20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .title-etc h1 {
+        font-size: 70px;
+    }
+}

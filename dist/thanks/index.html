@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Octane</title>
+    <style>
+        /* Basic reset */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background and text styling */
+        body {
+            background-color: #f4f4f4; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .thank-you-container {
+            background-color: #fff; /* White container for contrast */
+            padding: 40px 20px;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-width: 500px;
+            width: 90%; /* Responsive width */
+        }
+
+        /* Heading styling */
+        h1 {
+            color: #326db6; /* Accent color */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+        }
+
+        /* Button styling */
+        .back-home-btn {
+            background-color: #326db6; /* Accent color */
+            color: #fff; /* White text for contrast */
+            border: none;
+            border-radius: 8px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Makes the link behave like a button */
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home-btn:hover {
+            background-color: #285a9c; /* Darker shade on hover */
+        }
+
+        .login-dir-btn {
+            background-color: transparent; /* No background for secondary button */
+            color: #326db6; /* Accent color for text */
+            border: 2px solid #326db6; /* Accent color for border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for the button */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Button-like behavior */
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        .login-dir-btn:hover {
+            background-color: #326db6; /* Accent color background on hover */
+            color: #fff; /* White text on hover */
+            border-color: #326db6; /* Maintain border color */
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your enquiry has been successfully submitted. We will get back to you shortly.</p>
+        <div class="buttons">
+            <a href="/" class="back-home-btn">Back to Home</a>
+            <a href="/login/" class="login-dir-btn">Login/Signup</a>
+        </div>
+    </div>
+    <script>
+        // Check if the page was accessed via form submission
+        if (!document.referrer.includes(window.location.hostname)) {
+            window.location.href = "/"; // Redirect to homepage if not accessed via form
+        }
+    </script>
+</body>
+</html>

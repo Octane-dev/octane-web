@@ -5,7 +5,7 @@ exports.handler = async (event) => {
     const token = event.headers.authorization;
 
     // Verify the token (example using Netlify Identity)
-    const response = await fetch('https://<YOUR_SITE>.netlify.app/.netlify/identity/user', {
+    const response = await fetch('https://octanemotion.netlify.app/.netlify/identity/user', {
         headers: { Authorization: `Bearer ${token}` }
     });
 

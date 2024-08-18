@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/netlify-identity-widget@1.7.2/dist/netlify-identity-widget.min.js"></script>
     <script>
         // Your provided JavaScript code
+        netlifyIdentity.init()
         async function fetchProtectedContent() {
             const response = await fetch('/.netlify/functions/protect-content', {
                 headers: { Authorization: `Bearer ${netlifyIdentity.currentUser().token.access_token}` }

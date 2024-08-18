@@ -4,32 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protected Content</title>
-    <script src="https://unpkg.com/netlify-identity-widget@1.7.2/dist/netlify-identity-widget.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
     <script>
-        // Your provided JavaScript code
-        netlifyIdentity.init()
-        async function fetchProtectedContent() {
-            const response = await fetch('/.netlify/functions/protect-content', {
-                headers: { Authorization: `Bearer ${netlifyIdentity.currentUser().token.access_token}` }
+        window.onload = function() {
+            // Initialize Netlify Identity after the window has fully loaded
+            netlifyIdentity.init();
+
+            async function fetchProtectedContent() {
+                const user = netlifyIdentity.currentUser();
+
+                if (user && user.token) {
+                    const response = await fetch('/.netlify/functions/protect-content', {
+                        headers: { Authorization: `Bearer ${user.token.access_token}` }
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        document.getElementById('content').innerHTML = data.content;
+                    } else {
+                        window.location.href = '/';
+                    }
+                } else {
+                    window.location.href = '/';
+                }
+            }
+
+            netlifyIdentity.on('init', user => {
+                if (user) {
+                    fetchProtectedContent();
+                } else {
+                    window.location.href = '/';
+                }
             });
 
-            if (response.ok) {
-                const data = await response.json();
-                document.getElementById('content').innerHTML = data.content;
-            } else {
-                // Handle unauthorized access
-                window.location.href = '/';
-            }
-        }
-
-        // Fetch content after authentication check
-        netlifyIdentity.on('init', user => {
-            if (user) {
+            netlifyIdentity.on('login', () => {
                 fetchProtectedContent();
-            } else {
-                window.location.href = '/';
-            }
-        });
+            });
+        };
     </script>
 </head>
 <body>
